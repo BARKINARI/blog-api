@@ -1,6 +1,8 @@
+using System.ComponentModel.DataAnnotations;
 using Blog.Api.Data;
 using Blog.Api.DTOs;
 using Blog.Api.Models;
+using Blog.Api.Services;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
@@ -35,5 +37,7 @@ public static class AuthEndpoints
 
             return Results.Ok(new { message = "Kayıt başarılı." });
         });
+
+        // POST /api/auth/login
     }
 }
